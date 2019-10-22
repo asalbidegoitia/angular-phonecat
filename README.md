@@ -59,6 +59,10 @@ npm i -> para instalar las dependencias
 - npm start para arrancar (localhost:8000 en el navegador)
 ![Captura2](https://user-images.githubusercontent.com/16878209/67278308-091cd880-f4c9-11e9-9d57-fbd2d98370cf.PNG)
 
+- package.json igual al pom.xml y cuando se instalan las dependencias o librerias se guardan en la carpeta node-modules
+  node.modules no se sube a git, va a gitignore
+
+
 
 ### step-0 _Bootstrapping_
 
