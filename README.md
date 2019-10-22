@@ -48,6 +48,18 @@ To see the changes made between any two lessons use the `git diff` command:
 git diff step-?..step-?
 ```
 
+### Para instalar
+- Hacer git clone https://github.com/angular/angular-phonecat
+![Captura0](https://user-images.githubusercontent.com/16878209/67278358-1fc32f80-f4c9-11e9-8e5a-5255328986af.png)
+
+- Instalar dependencias desde la terminal de visual studio code
+npm i -> para instalar las dependencias
+![Captura1](https://user-images.githubusercontent.com/16878209/67278300-04f0bb00-f4c9-11e9-8242-90be2515dc70.PNG)
+
+- npm start para arrancar (localhost:8000 en el navegador)
+![Captura2](https://user-images.githubusercontent.com/16878209/67278308-091cd880-f4c9-11e9-9d57-fbd2d98370cf.PNG)
+
+
 ### step-0 _Bootstrapping_
 
 - Add the 'angular.js' script.
