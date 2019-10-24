@@ -4,14 +4,22 @@
         "id": "motorola-xoom-with-wi-fi", 
         "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg", 
         "name": "Motorola XOOM\u2122 with Wi-Fi", 
-        "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb)."
+        "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb).",
+        "storage": {
+            "flash": "32000", 
+            "ram": "1000"
+        }
     }, 
     {
         "age": 1, 
         "id": "motorola-xoom", 
         "imageUrl": "img/phones/motorola-xoom.0.jpg", 
         "name": "MOTOROLA XOOM\u2122", 
-        "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
+        "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb).",
+        "storage": {
+            "flash": "31000", 
+            "ram": "1100"
+        }
     }, 
     {
         "age": 2, 
@@ -151,5 +159,16 @@
         "imageUrl": "img/phones/motorola-charm-with-motoblur.0.jpg", 
         "name": "Motorola CHARM\u2122 with MOTOBLUR\u2122", 
         "snippet": "Motorola CHARM fits easily in your pocket or palm.  Includes MOTOBLUR service."
+    },
+    {
+        "age": 20, 
+        "id": "aquaris-x5", 
+        "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRD2Wr4jUs37byfQBpu8BdCNiKuSsPWpcWd2KjpNdqQUKSJlsM5bVCPVs7bLwySKymLpqtjCPBeCbUowPmZl5akyAHpT3uJ03D48O80rIdE_bLmTKqEr98x&usqp=CAc", 
+        "name": "BQ Aquaris X5", 
+        "snippet": "BQ Aquaris X5 fits easily in your pocket or palm.",
+        "storage": {
+            "flash": "16000", 
+            "ram": "2000"
+        }
     }
 ]
