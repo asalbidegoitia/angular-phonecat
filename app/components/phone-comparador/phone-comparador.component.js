@@ -5,8 +5,8 @@ angular.
 module('phoneComparador').
 component('phoneComparador', {
   templateUrl: 'components/phone-comparador/phone-comparador.template.html',
-  controller: ['Phone',
-    function phoneComparadorController(Phone) {
+  controller: ['Phone', 'compraMovil','$scope',
+    function phoneComparadorController(Phone, compraMovil, $scope) {
       console.trace('phoneComparadorController');
       var self = this;
       self.selec = 0;
@@ -25,6 +25,11 @@ component('phoneComparador', {
           self.selec = 0;
         }
       } //end seleccionar
+
+      $scope.$on("eventoCompra", function (event, data) {
+        alert('eventoCompra en padre ' + data.telefono.id);
+      });
+
     } //end controller
   ]
 });
