@@ -8,16 +8,18 @@ component('phoneComparadorDetalle', {
     mostrar: '=', //recibe de <phone-comparador-card></phone-comparador-card>
     comparar: '=' //recibe de <phone-comparador-card></phone-comparador-card>
   },
-  controller: ['compraMovil', '$scope',
-    function phoneComparadorDetalleController(compraMovil, $scope) {
+  controller: ['$scope', 'compraMovil',
+    function phoneComparadorDetalleController($scope, compraMovil) {
       console.trace('phoneComparadorDetalleController');
       var self = this;
+      self.cesta=[];
 
       self.comprar = function () {
         console.trace('click boton compra %o', self.mostrar);
         $scope.$emit("eventoCompra", {
           telefono: self.mostrar
         });
+        compraMovil.setProducto(self.mostrar);  
       } //end comprar
     } //end controller
   ]
