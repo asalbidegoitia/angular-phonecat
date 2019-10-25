@@ -62,12 +62,11 @@ npm i -> para instalar las dependencias
 - package.json igual al pom.xml y cuando se instalan las dependencias o librerias se guardan en la carpeta node-modules (node.modules no se sube a git, va a gitignore)
 
 - Comandos basicos de npm
-npm i -> instalar
-npm start -> iniciar servidor
-npm i -g json-server -> instalar json-server de forma global
-npm i -save-dev json-server -> instalar json-server para el proyecto
-npm i -save-dev concurrently -> lanzar tareas de forma concurrente
-
+  - npm i -> instalar
+  - npm start -> iniciar servidor
+  - npm i -g json-server -> instalar json-server de forma global
+  - npm i -save-dev json-server -> instalar json-server para el proyecto
+  - npm i -save-dev concurrently -> lanzar tareas de forma concurrente
 
 ### step-0 _Bootstrapping_
 
