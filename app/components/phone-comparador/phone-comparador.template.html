@@ -1,26 +1,44 @@
-
 <div class="container">
   <h1>Comparador</h1>
   <div class="row">
-    <p>
-      Buscar:
-      <input ng-model="$ctrl.query.id" />
-    </p>
-    <div class="col-md-2"> <b>Listado Moviles</b><br />
+    <!-- 1º columan -->
+    <div class="col-md-2">
+      <p>
+        Buscar:
+        <input type="search" ng-model="nombre" placeholder="Busca por nombre">
+      </p>
+      <select ng-model="$ctrl.filtro.atributo">
+        <option value="ram">RAM</option>
+        <option value="flash">FLASH</option>
+      </select>
+      <br>
+      <label>MIN {{$ctrl.filtro.min}}</label>
+      <input type="range" ng-model="$ctrl.filtro.min" step="512" max="2048" min="0">
+
+      <label>MAX {{$ctrl.filtro.max}}</label>
+      <input type="range" ng-model="$ctrl.filtro.max" step="512" max="32000" min="0">
+
+      <b>Listado Moviles</b><br />
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">
+
+        <li class="list-group-item" ng-repeat="phone in $ctrl.phones | filter:nombre | filtroTelefonos:$ctrl.filtro"
+          ng-click="$ctrl.selecionar(phone)">
           <img src="{{phone.imageUrl}}" alt="{{phone.name}}" class="responsive" ng-click="$ctrl.seleccionar(phone)">
-          {{phone.name}}</li>
+          {{phone.name}}
+          <br>
+          FLASH:{{phone.storage.flash}} RAM:{{phone.storage.ram}}
+        </li>
       </ul>
-    </div>
+    </div> 
+    <!-- fin 1º columna-->
     <phone-comparador-detalle mostrar='$ctrl.phone1' comparar='$ctrl.phone2'></phone-comparador-detalle>
     <phone-comparador-detalle comparar='$ctrl.phone1' mostrar='$ctrl.phone2'></phone-comparador-detalle>
     <div class="col-md-2"> <b>Cesta de la compra</b> <br />
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="(key,movil) in $ctrl.comprarMovil()">{{movil.id}} <br> 
+        <li class="list-group-item" ng-repeat="(key,movil) in $ctrl.comprarMovil()">{{movil.id}} <br>
           <b>cantidad:</b> {{movil.cantidad}}
         </li>
       </ul>
-    </div> <!-- end row -->
-  </div>
+    </div>
+  </div> <!-- end row -->
 </div>

@@ -9,6 +9,13 @@ component('phoneComparador', {
     function phoneComparadorController(Phone, $scope, compraMovil) {
       console.trace('phoneComparadorController');
       var self = this;
+
+      self.filtro = {
+        "atributo": "ram",         
+        "min": 0,
+        "max": 32000
+      }
+
       self.selec = 0;
       self.orderProp = 'age';
 
@@ -35,4 +42,23 @@ component('phoneComparador', {
 
     } //end controller
   ]
+});
+
+
+angular.module('phoneComparador').filter('filtroTelefonos', function () {
+  return function( items, filtroObject){
+    console.log('filtroTelefonos filtro=%o', filtroObject);
+
+    if ( items ){
+
+      return items.filter((telefono)=> {
+        let value = telefono.storage[filtroObject.atributo];
+        //console.debug("telefono=%s value=%s min%s max=%s", telefono.id, value, min, max );
+        return value >= filtroObject.min && value <= filtroObject.max ;
+      });
+
+    }  
+
+    // return items;
+  }
 });
