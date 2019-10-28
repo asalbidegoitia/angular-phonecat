@@ -17,7 +17,10 @@ config(['$routeProvider',
     when('/cesta', {
       template: '<phone-cesta></phone-cesta>'
     }).
-    when('/nuevo', {
+    when('/nuevo/', {
+      template: '<phone-formulario></phone-formulario>'
+    }).
+    when('/editar/:phoneId', {
       template: '<phone-formulario></phone-formulario>'
     }).
     when('/404', {
@@ -26,3 +29,5 @@ config(['$routeProvider',
     otherwise('/phones');
   }
 ]);
+
+

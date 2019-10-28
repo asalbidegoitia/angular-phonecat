@@ -52,13 +52,15 @@ angular.module('phoneComparador').filter('filtroTelefonos', function () {
     if ( items ){
 
       return items.filter((telefono)=> {
-        let value = telefono.storage[filtroObject.atributo];
-        //console.debug("telefono=%s value=%s min%s max=%s", telefono.id, value, min, max );
-        return value >= filtroObject.min && value <= filtroObject.max ;
+        if(telefono.storage){
+          let value = telefono.storage[filtroObject.atributo];
+          //console.debug("telefono=%s value=%s min%s max=%s", telefono.id, value, min, max );
+          return value >= filtroObject.min && value <= filtroObject.max ;
+        }else{
+          return true;
+        }
       });
-
-    }  
-
+    } 
     // return items;
   }
 });
